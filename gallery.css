@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #fff1e6;
+    font-family: 'Playball', cursive;
+    padding-bottom: 20px;
+}
+
+.nav{
+    padding-bottom: 40px;
+}
+.nav-link{
+    color: #cb997e;
+    font-family: 'Lora', serif;
+    font-size: x-large !important;
+}
+
+.nav-link:hover{
+    color: #ddbea9;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 60px;
+    justify-items: center;
+}
+
+.card-img-top{
+    height: 30rem;
+    object-fit: contain;
+    padding-top: 2rem;
+}
+
+.card{
+    width: 22rem;
+    height: 37rem;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+    display: flex;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+}
+
+.card:hover {
+    filter: none;
+    -webkit-filter: grayscale(0);
+}
+
+.card-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.credit:link{
+    text-decoration: none;
+}
+
+.credit{
+    color: #d9ae94;
+}
