@@ -47,74 +47,98 @@
                 <br>
                 <label for="email">Email Address</label>
                 <br>
-                <input class="box" type="email" id="email" name="name">
+                <input class="box" type="email" id="email" name="email">
             </form>
         </div>
 
+        <!-- Breads -->
         <div class="forms">
             <div>
                 <h3> Bread:</h3>
                 <form>
-                    <input type="radio" id="white" name="bread" value="White">
+                    <input class="bread" type="radio" id="white" name="bread" value="White Bread">
                     <label for="white">White</label>
                     <br>
-                    <input type="radio" id="wheat" name="bread" value="Wheat">
+                    <input class="bread" type="radio" id="wheat" name="bread" value="Wheat Bread">
                     <label for="wheat">Wheat</label>
                     <br>
-                    <input type="radio" id="multi" name="bread" value="Multigrain">
+                    <input class="bread" type="radio" id="multi" name="bread" value="Multigrain Bread">
                     <label for="multi">Multigrain</label>
                     <br>
-                    <input type="radio" id="flat" name="bread" value="Flatbread">
+                    <input class="bread" type="radio" id="flat" name="bread" value="Flatbread Bread">
                     <label for="flat">Flatbread</label>
                     <br>
-                    <input type="radio" id="gf" name="bread" value="Gluten-Free">
+                    <input class="bread" type="radio" id="gf" name="bread" value="Gluten-Free Bread">
                     <label for="gf">Gluten-Free</label>
                 </form>
             </div>
 
+            <!-- Meats -->
+            <div>
+                <h3> Meats:</h3>
+                <form>
+                    <input type="radio" id="turkey" name="meats" value="Turkey">
+                    <label for="turkey">Turkey</label>
+                    <br>
+                    <input type="radio" id="ham" name="meats" value="Ham">
+                    <label for="ham">Ham</label>
+                    <br>
+                    <input type="radio" id="roastbeef" name="meats" value="Roast Beef">
+                    <label for="roastbeef">Roast Beef</label>
+                    <br>
+                    <input type="radio" id="meatball" name="meats" value="Meatballs">
+                    <label for="meatball">Meatballs</label>
+                    <br>
+                    <input type="radio" id="veggie" name="meats" value="Plant Based Turkey">
+                    <label class="wrap" for="veggie">Plant Based Turkey</label>
+                </form>
+            </div>
+
+            <!-- Toppings -->
             <div>
                 <h3>Toppings:</h3>
                 <form>
-                    <input type="checkbox" id="cheese" name="cheese" value="Cheese">
+                    <input class="toppings" type="checkbox" id="cheese" name="cheese" value="Cheese">
                     <label for="cheese">Cheese</label>
                     <br>
-                    <input type="checkbox" id="lettuce" name="lettuce" value="Lettuce">
+                    <input class="toppings"  type="checkbox" id="lettuce" name="lettuce" value="Lettuce">
                     <label for="lettuce">Lettuce</label>
                     <br>
-                    <input type="checkbox" id="tomato" name="tomato" value="Tomato">
+                    <input class="toppings"  type="checkbox" id="tomato" name="tomato" value="Tomato">
                     <label for="tomato">Tomato</label>
                     <br>
-                    <input type="checkbox" id="onion" name="onion" value="Onions">
+                    <input class="toppings"  type="checkbox" id="onion" name="onion" value="Onions">
                     <label for="onion">Onions</label>
                     <br>
-                    <input type="checkbox" id="peppers" name="peppers" value="Mixed Peppers">
-                    <label for="peppers">Mixed Peppers</label>
+                    <input class="toppings"  type="checkbox" id="peppers" name="peppers" value="Mixed Peppers">
+                    <label class="wrap" for="peppers">Mixed Peppers</label>
                     <br>
                     <br>
                     Condiments:
                     <br>
-                    <input type="checkbox" id="mayo" name="mayo" value="Mayo">
+                    <input class="toppings"  type="checkbox" id="mayo" name="mayo" value="Mayo">
                     <label for="mayo">Mayo</label>
                     <br>
-                    <input type="checkbox" id="mustard" name="mustard" value="Mustard">
+                    <input class="toppings"  type="checkbox" id="mustard" name="mustard" value="Mustard">
                     <label for="mustard">Mustard</label>
                 </form>
             </div>
 
+            <!-- Style -->
             <div>
                 <h3>Style:</h3>
                 <form>
-                    <input type="radio" id="half" name="size" value="Half Sandwich">
-                    <label for="half">Half Sandwich</label>
+                    <input class="size" type="radio" id="half" name="size" value="Half">
+                    <label class="wrap" for="half">Half Sandwich</label>
                     <br>
-                    <input type="radio" id="whole" name="size" value="Whole Sandwich">
-                    <label for="whole">Whole Sandwich</label>
+                    <input class="size" type="radio" id="whole" name="size" value="Whole">
+                    <label class="wrap" for="whole">Whole Sandwich</label>
                     <br>
                     <br>
-                    <input type="checkbox" id="toast" name="toast" value="Toasted">
+                    <input class="style" type="checkbox" id="toast" name="toast" value="toasted">
                     <label for="toast">Toasted</label>
                     <br>
-                    <input type="checkbox" id="slice" name="slice" value="Cut in Half">
+                    <input class="style" type="checkbox" id="slice" name="slice" value="cut it in half">
                     <label for="slice">Cut in Half</label>
                 </form>
             </div>
@@ -123,12 +147,14 @@
         <h3> Special Instructions:</h3>
         <textarea class="box" name="notes" id="notes"></textarea>
         <br>
-        <button type="button" class="btn btn-success">Submit Your Order!</button>
+        <input type="submit" onclick="submitOrder()" id="submit" type="button" class="btn btn-success" value="Submit Your Order!">
+        
 
     </div>
 </div>
 
-
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="shop.js"></script>
   </body>
 </html>
